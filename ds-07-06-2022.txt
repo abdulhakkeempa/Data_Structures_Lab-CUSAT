@@ -1,0 +1,40 @@
+COUNT(START)
+1. set PTR = START
+2. set count = 0
+3. Repeat while PTR != NULL
+	a.count = count +1
+	b.PTR = PTR -> link
+4. write count
+4. EXIT
+
+
+Searching a Linked List ( Unsorted List )
+
+SEARCH(START,ITEM,LOC)
+1. set PTR = START
+2. Repeat while PTR != NULL
+	a.if ITEM == PTR ->info then
+		1.set LOC = PTR
+		2.exit
+	b.else 
+		3.PTR = PTR->link
+3. set LOC = NULL
+4. EXIT
+
+
+
+Searching a Linked List ( Sorted List )
+
+SEARCH(START,ITEM,LOC)
+1. set PTR = START
+2. Repeat while PTR != NULL
+	a.if ITEM < PTR ->info then
+		1.PTR = PTR->link
+	b.else if ITEM == PTR -> info
+		1. set LOC = PTR
+		2. EXIT
+	c. else
+		set LOC = NULL
+		exit
+3. set LOC = NULL
+4. EXIT
