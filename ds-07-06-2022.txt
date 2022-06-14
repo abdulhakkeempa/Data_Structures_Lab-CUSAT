@@ -38,3 +38,59 @@ SEARCH(START,ITEM,LOC)
 		exit
 3. set LOC = NULL
 4. EXIT
+
+
+Inserting a new node in Linked List at First Position
+
+INSERT_FIRST(START,ITEM)
+1. Create a node NEW
+2. if NEW = NULL then write OVERFLOW
+3. set NEW->info = ITEM
+4. set NEW->link = START
+5. set START = NEW
+6. EXIT
+
+
+Inserting a new node in Linked List at Last Position
+
+INSERT_LAST(START,ITEM)
+1. Create a node NEW
+2. if NEW = NULL then write OVERFLOW and EXIT
+3. set NEW->info = ITEM
+4. if START = NULL then
+	NEW -> LINK = NULL
+	START = NEW
+	EXIT
+5. else
+	PTR = START
+	REPEAT STEPS WHILE PTR->LINK != NULL
+		set PTR = PTR->LINK
+	set PTR->link = NEW
+6. EXIT
+
+Inserting a new node in Linked List at after a given Position
+
+INSERT_LINK(START,LOC,ITEM)
+1. Create a node NEW
+2. if NEW = NULL then write OVERFLOW and EXIT
+3. set NEW ->info = ITEM
+4. if LOC = NULL then
+	a.set NEW-> LINK = START
+	b.set START = NEW
+5. else
+	a. NEW->link = LOC->link
+	b. LOC->link = NEW
+6. EXIT
+
+
+FIND(START,ITEM,LOC)
+1. if START = NULL then set LOC = NULL and return
+2. if ITEM<START->info then set LOC = NULL and return
+3. set SAVE = START and PTR = START->link
+4. Repeat Steps 2 and 3 while PTR != NULL
+   a. if ITEM < PTR->info
+      set LOC = SAVE and return
+   b. SAVE - PTR AND PTR = PTR->link
+5. set LOC = SAVE
+6. Return
+
