@@ -94,3 +94,21 @@ FIND(START,ITEM,LOC)
 5. set LOC = SAVE
 6. Return
 
+
+FIND(START,ITEM,LOC,LOCP)
+1. if START = NULL , then
+	set LOC = NULL
+	set LOCP = NULL
+	Return
+2. if START->info = ITEM then 
+	set LOC = START
+	set LOCP = NULL
+	Return
+3. set SAVE = START
+	set PTR = START->link
+4. Repeat Steps a and b while
+	PTR != NUL
+	A. if PTR->info = ITEM then
+		set LOC = PTR
+
+
