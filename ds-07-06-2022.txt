@@ -112,3 +112,40 @@ FIND(START,ITEM,LOC,LOCP)
 		set LOC = PTR
 
 
+
+
+STACK
+PUSH(STACK,TOP,MAXSTK,ITEM)
+1. if TOP = MAXSTK then write "OVERFLOW" and exit
+2. set TOP = TOP+1
+3. set STACK[TOP]=ITEM
+4. Exit
+
+POP(STACK,TOP,ITEM)
+1. if TOP = 0 then write "UNDERFLOW" and exit
+2. set ITEM = STACK[TOP]
+3. set TOP = TOP-1
+4. Exit
+
+
+LINKED LIST REPRESENATION OF STACK
+PUSH(TOP,ITEM)
+1. Create a new node NEW
+2. if NEW = NULL then write "OVERFLOW" and exit
+3. Set NEW->INFO = ITEM
+4. Set NEW->LINK = TOP
+5. set TOP = NEW
+6. Exit
+
+POP(TOP,ITEM)
+1. if TOP = NULL then write "UNDERFLOW" and exit
+2. set ITEM = TOP->INFO
+3. Set TEMP = TOP and TOP = TOP ->LINK
+4. Delete TEMP and add to free storage list.
+5. Exit
+
+
+
+
+
+
