@@ -15,6 +15,7 @@ int interpolationSearch(int arr[],int key,int length){
 	while (start<=end and key>=arr[start] and key<=arr[end]){
 		int pos;
 		pos = start + ((key - arr[start])*(end-start))/(arr[end]-arr[start]);
+		cout<<"Pos : "<<pos<<endl;
 		if (arr[pos]==key){
 			return pos;
 		}
@@ -29,9 +30,9 @@ int interpolationSearch(int arr[],int key,int length){
 }
 
 int main() {
-	int data[] = {10,20,30,40,50,60,70,75,89,98};
+	int data[] = {10, 13, 15, 26, 28, 50, 56, 88, 94, 127, 159, 356, 480, 567, 689, 699, 780, 850, 956, 995};
 	int length = sizeof(data)/sizeof(data[0]);
-	int index = interpolationSearch(data, 100, length);
+	int index = interpolationSearch(data, 98, length);
 	if(index!=-1){
 		cout<<"Element found at "<<index+1<<"th position"<<endl;
 	}
