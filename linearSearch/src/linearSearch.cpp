@@ -14,7 +14,7 @@ int linearSearch(int data[],int size,int search_key){
 
 
 int main() {
-	int data [] = {1,2,3,4,5,6,2,7};
+	int data [] = {1,2,3,4,5,6,7};
 	//extracting the size of the array
 	int size = sizeof(data)/sizeof(int);
 	int pos = linearSearch(data,size,10);

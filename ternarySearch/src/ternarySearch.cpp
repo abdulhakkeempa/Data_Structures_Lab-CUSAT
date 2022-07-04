@@ -29,7 +29,6 @@ int ternarySearch(int arr[],int key,int length){
 		}
 
 	}
-
 	return -1;
 }
 
