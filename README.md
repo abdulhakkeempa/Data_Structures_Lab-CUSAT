@@ -28,3 +28,8 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [ ] 25. Deletion and insertion of node in two way list
 - [ ] 26. Push and pop in stack using array and linked list. 
 - [ ] 27. Create a Binary search tree and perform traversal(search), insert and delete on the tree. 
+## Algorithms
+* Interpolation Search
+```
+POS = BEG + [[ITEM - ARRAY[BEG] * [END - BEG]]/[DATA[END]-DATA[BEG]]]
+```
