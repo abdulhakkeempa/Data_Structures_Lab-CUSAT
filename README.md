@@ -4,9 +4,9 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [x] 1. Inserting and deleting an element from an Array
 - [x] 2. Linear Search
 - [x] 3. Binary Search
-- [ ] 4. Ternary Search
-- [ ] 5. Interpolation Search 
-- [ ] 6. Fibonacci Search
+- [x] 4. Ternary Search
+- [x] 5. Interpolation Search 
+- [x] 6. Fibonacci Search
 - [ ] 7. Selection Sort  
 - [ ] 8. Bubble Sort
 - [ ] 9. Insertion sort  
