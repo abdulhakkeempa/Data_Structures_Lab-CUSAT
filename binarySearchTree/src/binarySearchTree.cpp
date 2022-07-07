@@ -35,23 +35,51 @@ public:
 		root = NULL;
 	}
 	void createNode(int val);
-	void printNode(Node* node);
-
+	void printNode();
+	void inOrder(Node* node);
+	void preOrder(Node* node);
+	void postOrder(Node* node);
+	void deleteNode(Node* node,int key);
+	void smallFunction(int key){
+		deleteNode(root, key);
+	}
 };
 
-void BinaryTree::printNode(Node* node){
-
-	 if (node == NULL)
+void BinaryTree::postOrder(Node* node){
+	 if (node == NULL){
 	        return;
+	 }
+	 postOrder(node->left);
+	 postOrder(node->right);
+	 cout<<node->data<<",";
+}
 
-	    // first recur on left subtree
-	    printNode(node->left);
+void BinaryTree::preOrder(Node* node){
+	 if (node == NULL){
+	        return;
+	 }
+	 cout<<node->data<<",";
+	 preOrder(node->left);
+	 preOrder(node->right);
+}
 
-	    // now deal with the node
-	    cout << node->data << " ";
+void BinaryTree::inOrder(Node* node){
+	 if (node == NULL){
+	        return;
+	 }
+	 inOrder(node->left);
+	 cout<<node->data<<",";
+	 inOrder(node->right);
+}
 
-	    // then recur on right subtree
-	    printNode(node->right);
+void BinaryTree::printNode(){
+	cout<<"In-Order"<<endl;
+	inOrder(root);
+	cout<<"\nPre-Order"<<endl;
+	preOrder(root);
+	cout<<"\nPost-Order"<<endl;
+	postOrder(root);
+	cout<<endl;
 }
 
 void BinaryTree::createNode(int val){
@@ -84,14 +112,31 @@ void BinaryTree::createNode(int val){
 
 }
 
+void BinaryTree::deleteNode(Node* node,int key){
+	if (node==NULL){
+		return;
+	}
+	else if(key==node->data){
+		cout<<"found"<<endl;
+	}
+	else if(key>node->data){
+		deleteNode(node->right, key);
+	}
+	else if(key<node->data){
+		deleteNode(node->left, key);
+	}
+}
+
 int main() {
 	BinaryTree Tree;
-	Tree.createNode(5);
-	Tree.createNode(10);
-	Tree.createNode(4);
-	Tree.createNode(11);
-	Tree.createNode(15);
+	Tree.createNode(100);
 	Tree.createNode(20);
-	Tree.printNode(Tree.root);
+	Tree.createNode(200);
+	Tree.createNode(10);
+	Tree.createNode(30);
+	Tree.createNode(150);
+	Tree.createNode(300);
+	Tree.printNode();
+	Tree.smallFunction(56);
 	return 0;
 }
