@@ -41,11 +41,9 @@ public:
 
 void BinaryTree::printNode(){
 	Node* temp = root;
-	while(temp != NULL){
-		cout<<temp->data<<endl;
-		temp = temp->right;
+	while(true){
+		break;
 	}
-	cout<<temp->data<<endl;
 }
 
 void BinaryTree::createNode(int val){
@@ -54,39 +52,36 @@ void BinaryTree::createNode(int val){
 		root = newNode;
 		return;
 	}
-	else if (val>root->data){
-		if (root->right == NULL){
-		root->right = newNode;
-		return;
-		}
-		Node* temp = root->right;
-		Node * currentNode;
-		while (temp != NULL){
-			cout<<temp->data<<endl;
-			if (val>temp->data){
-				temp = temp->right;
-				currentNode = temp;
+	Node* temp = root;
+	while (true){
+		if(val<temp->data){
+			if(temp->left==NULL){
+				temp->left = newNode;
+				break;
 			}
-			else if (val<temp->data){
+			else{
 				temp = temp->left;
-				currentNode = temp;
 			}
 		}
-
-		temp = newNode;
-		currentNode->right = temp;
-		cout<<temp->left<<" : "<<temp->data<<" : "<<temp->right<<endl;
+		else {
+			if(temp->right==NULL){
+				temp->right = newNode;
+				break;
+			}
+			else{
+				temp = temp->right;
+			}
+		}
 	}
-	root->left = newNode;
+
 }
 
 int main() {
 	BinaryTree Tree;
-//	Tree.createNode(5);
-//	Tree.createNode(10);
-//	Tree.createNode(4);
-//	Tree.createNode(11);
-//	Tree.printNode();
-	Tree.checkNULL();
+	Tree.createNode(5);
+	Tree.createNode(10);
+	Tree.createNode(4);
+	Tree.createNode(11);
+	Tree.printNode();
 	return 0;
 }
