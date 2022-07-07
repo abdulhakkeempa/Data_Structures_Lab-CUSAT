@@ -29,21 +29,29 @@ public:
 };
 
 class BinaryTree{
-	Node* root;
 public:
+	Node* root;
 	BinaryTree(){
 		root = NULL;
 	}
 	void createNode(int val);
-	void printNode();
+	void printNode(Node* node);
 
 };
 
-void BinaryTree::printNode(){
-	Node* temp = root;
-	while(true){
-		break;
-	}
+void BinaryTree::printNode(Node* node){
+
+	 if (node == NULL)
+	        return;
+
+	    // first recur on left subtree
+	    printNode(node->left);
+
+	    // now deal with the node
+	    cout << node->data << " ";
+
+	    // then recur on right subtree
+	    printNode(node->right);
 }
 
 void BinaryTree::createNode(int val){
@@ -82,6 +90,8 @@ int main() {
 	Tree.createNode(10);
 	Tree.createNode(4);
 	Tree.createNode(11);
-	Tree.printNode();
+	Tree.createNode(15);
+	Tree.createNode(20);
+	Tree.printNode(Tree.root);
 	return 0;
 }
