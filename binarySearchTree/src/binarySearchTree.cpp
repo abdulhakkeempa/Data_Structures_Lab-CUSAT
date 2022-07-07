@@ -37,18 +37,6 @@ public:
 	void createNode(int val);
 	void printNode();
 
-	void checkNULL(){
-		Node* newN = new Node();
-		root->data = 10;
-		root->left = newN;
-		root->right = newN;
-		if (root==NULL){
-			cout<<"YES -2"<<endl;
-		}
-		else{
-			cout<<"NOT NULL"<<endl;
-		}
-	}
 };
 
 void BinaryTree::printNode(){
