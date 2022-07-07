@@ -29,8 +29,8 @@ public:
 };
 
 class BinaryTree{
-public:
 	Node* root;
+public:
 	BinaryTree(){
 		root = NULL;
 	}
@@ -39,9 +39,9 @@ public:
 	void inOrder(Node* node);
 	void preOrder(Node* node);
 	void postOrder(Node* node);
-	void deleteNode(Node* node,int key);
-	void smallFunction(int key){
-		deleteNode(root, key);
+	Node* deleteNode(Node* node,int key);
+	void deletion(int key){
+		root = deleteNode(root, key);
 	}
 };
 
@@ -112,18 +112,46 @@ void BinaryTree::createNode(int val){
 
 }
 
-void BinaryTree::deleteNode(Node* node,int key){
+Node* BinaryTree::deleteNode(Node* node,int key){
 	if (node==NULL){
-		return;
-	}
-	else if(key==node->data){
-		cout<<"found"<<endl;
+		return NULL;
 	}
 	else if(key>node->data){
-		deleteNode(node->right, key);
+		node->right=deleteNode(node->right, key);
+		return node;
 	}
 	else if(key<node->data){
-		deleteNode(node->left, key);
+		node->left=deleteNode(node->left, key);
+		return node;
+	}
+	else{
+		if (node->left ==NULL){
+			Node* temp = node->right;
+			delete node;
+			return temp;
+		}
+		else if (root->right == NULL){
+			Node* temp = node->left;
+			delete node;
+			return temp;
+		}
+		else {
+			Node* succParent = node;
+			Node* succ = node->right;
+			while (succ->left != NULL){
+				succParent = succ;
+				succ = succ->left;
+			}
+			if (succParent != node){
+				succParent->left = succ->right;
+			}
+			else{
+				succParent->right = succ->right;
+			}
+			node->data = succ->data;
+			delete succ;
+			return node;
+		}
 	}
 }
 
@@ -137,6 +165,8 @@ int main() {
 	Tree.createNode(150);
 	Tree.createNode(300);
 	Tree.printNode();
-	Tree.smallFunction(56);
+	Tree.deletion(150);
+	Tree.deletion(10);
+	Tree.printNode();
 	return 0;
 }
