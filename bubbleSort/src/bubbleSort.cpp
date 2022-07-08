@@ -11,14 +11,16 @@ using namespace std;
 
 void printArray(int* data,int length);
 
-void selectionSort(int* data,int length){
+
+void bubbleSort(int* data,int length){
 	for (int i = 0; i < length-1; ++i) {
-		for (int j = i+1; j < length; ++j) {
-			if (data[i]>data[j]){
+		for (int j = 0; j < length-i-1; ++j) {
+
+			if (data[j]>data[j+1]){
 				int temp;
-				temp = data[j];
-				data[j]=data[i];
-				data[i]=temp;
+				temp = data[j+1];
+				data[j+1]=data[j];
+				data[j]=temp;
 			}
 		}
 		cout<<"Pass "<<i<<" : ";
@@ -36,7 +38,7 @@ void printArray(int* data,int length){
 int main() {
 	int array[] = {7,4,10,8,3,1};
 	int length = sizeof(array)/sizeof(array[0]);
-	selectionSort(array, length);
+	bubbleSort(array, length);
 	printArray(array, length);
 	return 0;
 }
