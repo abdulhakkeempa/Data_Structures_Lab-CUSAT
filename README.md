@@ -29,7 +29,23 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [ ] 26. Push and pop in stack using array and linked list. 
 - [x] 27. Create a Binary search tree and perform traversal(search), insert and delete on the tree. 
 ## Algorithms
-* Interpolation Search
+### Binary Search
+```
+MID = (BEGIN+END)/2
+```
+### Ternary Search
+```
+MID1 = BEGIN + (END-BEGIN)/3
+MID2 = END - (END-BEGIN)/3
+```
+### Interpolation Search
 ```
 POS = BEG + [[ITEM - ARRAY[BEG] * [END - BEG]]/[DATA[END]-DATA[BEG]]]
 ```
+
+## Time Complexity
+### Linear Search - O(n)
+### Binary Search - O( log<sub>2</sub>(n) )
+### Ternary Search - O( log<sub>3</sub>(n) )
+### Interpolation Search - O( log(log(n)) )
+### Fibonacci Search - O( log(n )
