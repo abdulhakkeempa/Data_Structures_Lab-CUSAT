@@ -6,7 +6,7 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [x] [3. Binary Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/binarySearch/src/binarySearch.cpp)
 - [x] [4. Ternary Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/ternarySearch/src/ternaySearch.cpp)
 - [x] [5. Interpolation Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/interpolationSearch/src/interpolationSearch.cpp) 
-- [x] [6. Fibonacci Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/fibonacciSearch/src/fibonacciSearch.cpp))
+- [x] [6. Fibonacci Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/fibonacciSearch/src/fibonacciSearch.cpp)
 - [x] 7. Selection Sort  
 - [x] 8. Bubble Sort
 - [x] 9. Insertion sort  
