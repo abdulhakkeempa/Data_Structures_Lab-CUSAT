@@ -2,7 +2,7 @@
 All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Integrated M.Sc in Computer Science ( Artificial Intelligence and Data Science ) from Cochin University of Science and Technology
 ## Program
 - [x] 1. Inserting and deleting an element from an Array
-- [x] 2. Linear Search
+- [x] [2. Linear Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/linearSearch/src/linearSearch.cpp)
 - [x] 3. Binary Search
 - [x] 4. Ternary Search
 - [x] 5. Interpolation Search 
