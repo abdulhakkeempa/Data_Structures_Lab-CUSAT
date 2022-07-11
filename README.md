@@ -50,3 +50,5 @@ POS = BEG + [[ITEM - ARRAY[BEG] * [END - BEG]]/[DATA[END]-DATA[BEG]]]
 ### Interpolation Search - O( log(log(n)) )
 ### Fibonacci Search - O( log(n ) )
 ### Selection Sort - O( n<sup>2</sup> )
+### Bubble Sort - O( n<sup>2</sup> )
+### Merge Sort - O( n<sup>2</sup> )
