@@ -133,6 +133,7 @@ int main() {
 	for (int var = 0; var < userSize; ++var) {
 		cout<<array[var]<<",";
 	}
+	cout<<endl;
 
 	int exitChoice = 1;
 	while(exitChoice!=2){
@@ -170,5 +171,6 @@ int main() {
 		cout<<"1.Continue\n2.Exit"<<endl;
 		cin>>exitChoice;
 	}
+	cout<<"Successfully Exited"<<endl;
 	return 0;
 }
