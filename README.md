@@ -27,7 +27,7 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [ ] 24. Searching an item in the Two-way linked list. 
 - [ ] 25. Deletion and insertion of node in two way list
 - [ ] 26. Push and pop in stack using array and linked list. 
-- [x] 27. Create a Binary search tree and perform traversal(search), insert and delete on the tree. 
+- [x] [27. Create a Binary search tree and perform traversal (search), insert and delete on the tree.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/binarySearchTree/src/binarySearchTree.cpp) 
 ## Algorithms
 ### Binary Search
 ```
