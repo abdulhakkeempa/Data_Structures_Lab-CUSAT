@@ -2,11 +2,11 @@
 All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Integrated M.Sc in Computer Science ( Artificial Intelligence and Data Science ) from Cochin University of Science and Technology
 ## Program
 - [x] 1. Inserting and deleting an element from an Array
-- [x] 2. Linear Search
-- [x] 3. Binary Search
-- [x] 4. Ternary Search
-- [x] 5. Interpolation Search 
-- [x] 6. Fibonacci Search
+- [x] [2. Linear Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/linearSearch/src/linearSearch.cpp)
+- [x] [3. Binary Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/binarySearch/src/binarySearch.cpp)
+- [x] [4. Ternary Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/ternarySearch/src/ternaySearch.cpp)
+- [x] [5. Interpolation Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/interpolationSearch/src/interpolationSearch.cpp) 
+- [x] [6. Fibonacci Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/fibonacciSearch/src/fibonacciSearch.cpp)
 - [x] 7. Selection Sort  
 - [x] 8. Bubble Sort
 - [x] 9. Insertion sort  
@@ -29,7 +29,26 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [ ] 26. Push and pop in stack using array and linked list. 
 - [x] 27. Create a Binary search tree and perform traversal(search), insert and delete on the tree. 
 ## Algorithms
-* Interpolation Search
+### Binary Search
+```
+MID = (BEGIN+END)/2
+```
+### Ternary Search
+```
+MID1 = BEGIN + (END-BEGIN)/3
+MID2 = END - (END-BEGIN)/3
+```
+### Interpolation Search
 ```
 POS = BEG + [[ITEM - ARRAY[BEG] * [END - BEG]]/[DATA[END]-DATA[BEG]]]
 ```
+
+## Time Complexity
+### Linear Search - O(n)
+### Binary Search - O( log<sub>2</sub>(n) )
+### Ternary Search - O( log<sub>3</sub>(n) )
+### Interpolation Search - O( log(log(n)) )
+### Fibonacci Search - O( log(n ) )
+### Selection Sort - O( n<sup>2</sup> )
+### Bubble Sort - O( n<sup>2</sup> )
+### Merge Sort - O( n<sup>2</sup> )
