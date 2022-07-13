@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-void printArray(int* data,int length);
 void merge(int* array,int begin,int mid,int end){
 	int i,j,k;
 	int sortedArray[end];
@@ -53,17 +52,14 @@ void mergeSort(int* array,int begin,int end){
 void printArray(int* data,int length){
 	for (int var = 0; var < length; ++var) {
 		cout<<data[var]<<" ";
-		cout<<endl;
 	}
 	cout<<endl;
 }
 
 int main() {
-	int array[] = {60,50,72,22,3,4,5};
+	int array[] = {60,50,72,22,3,4,1};
 	int length = sizeof(array)/sizeof(array[0]);
-	mergeSort(array, 0,length);
-	for (int var = 0; var <= length; ++var) {
-		cout<<array[var]<<" ";
-	}
+	mergeSort(array, 0,length-1);
+	printArray(array,length);
 	return 0;
 }
