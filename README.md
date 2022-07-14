@@ -1,17 +1,17 @@
 # Data Structures Lab - CUSAT ( S2 )
 All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Integrated M.Sc in Computer Science ( Artificial Intelligence and Data Science ) from Cochin University of Science and Technology
 ## Program
-- [x] 1. Inserting and deleting an element from an Array
+- [x] [1. Inserting and deleting an element from an Array](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/arrayInsertionDeletion/src/arrayInsertionDeletion.cpp)
 - [x] [2. Linear Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/linearSearch/src/linearSearch.cpp)
 - [x] [3. Binary Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/binarySearch/src/binarySearch.cpp)
 - [x] [4. Ternary Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/ternarySearch/src/ternaySearch.cpp)
 - [x] [5. Interpolation Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/interpolationSearch/src/interpolationSearch.cpp) 
 - [x] [6. Fibonacci Search](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/fibonacciSearch/src/fibonacciSearch.cpp)
-- [x] 7. Selection Sort  
-- [x] 8. Bubble Sort
-- [x] 9. Insertion sort  
-- [ ] 10. Merge sort  
-- [x] 11. Substring Extraction
+- [x] [7. Selection Sort](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/selectionSort/src/selectionSort.cpp)
+- [x] [8. Bubble Sort](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/bubbleSort/src/bubbleSort.cpp)
+- [x] [9. Insertion Sort](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/insertSort/src/insertSort.cpp)  
+- [x] [10. Merge Sort](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/mergeSort/src/mergeSort.cpp)  
+- [x] [11. Substring Extraction](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/subString/src/subString.cpp)
 - [ ] 12. Pattern Matching
 - [ ] 13. Insertion of String, Deletion of string and Replacement of substring as each functions in a program. 
 - [ ] 14. Transpose of a sparse matrix
@@ -27,7 +27,7 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [ ] 24. Searching an item in the Two-way linked list. 
 - [ ] 25. Deletion and insertion of node in two way list
 - [ ] 26. Push and pop in stack using array and linked list. 
-- [x] 27. Create a Binary search tree and perform traversal(search), insert and delete on the tree. 
+- [x] [27. Create a Binary search tree and perform traversal (search), insert and delete on the tree.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/binarySearchTree/src/binarySearchTree.cpp) 
 ## Algorithms
 ### Binary Search
 ```
