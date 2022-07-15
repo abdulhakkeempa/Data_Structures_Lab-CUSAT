@@ -48,7 +48,7 @@ POS = BEG + [[ITEM - ARRAY[BEG] * [END - BEG]]/[DATA[END]-DATA[BEG]]]
 ### Linear Search - O(n)
 ### Binary Search - O( log<sub>2</sub>(n) )
 ### Ternary Search - O( log<sub>3</sub>(n) )
-### Interpolation Search - O( log(log(n)) )
+### Interpolation Search - O( log<sub>2</sub>(log<sub>2</sub>(n)) )
 ### Fibonacci Search - O( log(n ) )
 ### Selection Sort - O( n<sup>2</sup> )
 ### Bubble Sort - O( n<sup>2</sup> )
