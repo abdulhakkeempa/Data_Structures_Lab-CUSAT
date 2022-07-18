@@ -20,7 +20,7 @@ int binarySearch(int data[],int search_key,int low,int high){
 			low = mid +1 ;
 		}
 		else {
-			high = mid - 1;
+			high = mid;
 		}
 	}while(low!=high);
 	return -1;
