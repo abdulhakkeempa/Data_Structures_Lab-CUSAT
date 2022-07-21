@@ -12,7 +12,7 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [x] [9. Insertion Sort](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/insertSort/src/insertSort.cpp)  
 - [x] [10. Merge Sort](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/mergeSort/src/mergeSort.cpp)  
 - [x] [11. Substring Extraction](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/subString/src/subString.cpp)
-- [ ] 12. Pattern Matching
+- [x] 12. Pattern Matching
 - [ ] 13. Insertion of String, Deletion of string and Replacement of substring as each functions in a program. 
 - [ ] 14. Transpose of a sparse matrix
 - [ ] 15. Addition of sparse matrix
