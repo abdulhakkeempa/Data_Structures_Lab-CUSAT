@@ -93,6 +93,10 @@ int main(){
 				int pos,size;
 				cout<<"Enter the position where you want to enter"<<endl;
 				cin>>pos;
+				if (pos>=userSize){
+					cout<<"Array Overflow"<<endl;
+					break;
+				}
 				cout<<"Enter the size of the insert"<<endl;
 				cin>>size;
 				userSize = insert(array, size, pos, userSize);

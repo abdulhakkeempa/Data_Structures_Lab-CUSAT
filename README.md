@@ -12,7 +12,7 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [x] [9. Insertion Sort](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/insertSort/src/insertSort.cpp)  
 - [x] [10. Merge Sort](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/mergeSort/src/mergeSort.cpp)  
 - [x] [11. Substring Extraction](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/subString/src/subString.cpp)
-- [ ] 12. Pattern Matching
+- [x] 12. Pattern Matching
 - [ ] 13. Insertion of String, Deletion of string and Replacement of substring as each functions in a program. 
 - [ ] 14. Transpose of a sparse matrix
 - [ ] 15. Addition of sparse matrix
@@ -27,7 +27,8 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [ ] 24. Searching an item in the Two-way linked list. 
 - [ ] 25. Deletion and insertion of node in two way list
 - [ ] 26. Push and pop in stack using array and linked list. 
-- [x] [27. Create a Binary search tree and perform traversal (search), insert and delete on the tree.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/binarySearchTree/src/binarySearchTree.cpp) 
+- [x] [27. Create a Binary search tree and perform traversal (search), insert and delete on the tree.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/binarySearchTree/src/binarySearchTree.cpp)
+- [ ] [28. Quick Sort.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/quickSort/src/quickSort.cpp) 
 ## Algorithms
 ### Binary Search
 ```
@@ -47,8 +48,8 @@ POS = BEG + [[ITEM - ARRAY[BEG] * [END - BEG]]/[DATA[END]-DATA[BEG]]]
 ### Linear Search - O(n)
 ### Binary Search - O( log<sub>2</sub>(n) )
 ### Ternary Search - O( log<sub>3</sub>(n) )
-### Interpolation Search - O( log(log(n)) )
+### Interpolation Search - O( log<sub>2</sub>(log<sub>2</sub>(n)) )
 ### Fibonacci Search - O( log(n ) )
 ### Selection Sort - O( n<sup>2</sup> )
 ### Bubble Sort - O( n<sup>2</sup> )
-### Merge Sort - O( n<sup>2</sup> )
+### Merge Sort - O( n log<sub>2</sub>( n ) )
