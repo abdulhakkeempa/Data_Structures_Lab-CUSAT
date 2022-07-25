@@ -46,7 +46,7 @@ Node* LinkedList::searchItems(int item){
 		temp = temp->link;
 	}
 	cout<<"Element not in the list"<<endl;
-	return 0;
+	return NULL;
 }
 
 void LinkedList::printNodes(){
@@ -54,10 +54,12 @@ void LinkedList::printNodes(){
 		cout<<"List Overflow"<<endl;
 		return;
 	}
-	cout<<"Head : "<<head<<"-> "<<endl;
 	Node* temp = head;
 	while(temp !=NULL){
-		cout<<temp->data<<" -> "<<temp->link<<endl;
+		if(temp->data<10){
+			cout<<" ";
+		}
+		cout<<temp->data<<" | "<<temp->link<<" | "<<endl;
 		temp = temp->link;
 	}
 }
@@ -70,7 +72,6 @@ void LinkedList::addNode(int data){
 		return;
 	}
 	Node* temp = head;
-//	cout<<temp->link<<endl;
 	while (temp->link != NULL){
 		temp = temp->link;
 	}
@@ -79,14 +80,36 @@ void LinkedList::addNode(int data){
 
 int main() {
 	LinkedList List;
-	List.addNode(5);
-	List.addNode(59);
-	List.addNode(26);
-	List.addNode(10);
-	List.addNode(20);
-	List.printNodes();
-
-	Node* address = List.searchItems(100);
-	cout<<address<<endl;
+	int mainOption,loopOption=1;
+	while (loopOption==1){
+		cout<<"1.Add Node\n2.Search Node"<<endl;
+		cin>>mainOption;
+		switch (mainOption) {
+			case 1:
+				int nodeValue;
+				cout<<"Enter the value"<<endl;
+				cin>>nodeValue;
+				List.addNode(nodeValue);
+				List.printNodes();
+				break;
+			case 2:
+			{
+				int searchKey;
+				cout<<"Enter the search key"<<endl;
+				cin>>searchKey;
+				Node* address = List.searchItems(searchKey);
+				if(address){
+					cout<<"Element found with address "<<address<<endl;
+				}
+				break;
+			}
+			default:
+				cout<<"Invalid Statement"<<endl;
+				break;
+		}
+		cout<<"Do you want to continue\n1.Continue\n2.Quit"<<endl;
+		cin>>loopOption;
+	}
+	cout<<"Succesfully Exited!"<<endl;
 	return 0;
 }

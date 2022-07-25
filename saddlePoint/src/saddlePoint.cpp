@@ -49,7 +49,7 @@ int main() {
 	for (int i = 0; i < row; ++i) {
 		data[i] = new int [col];
 	}
-	cout<<"Enter the values"<<endl;
+	cout<<"\nEnter the values"<<endl;
 	for (int i = 0; i < row; ++i) {
 		for (int j = 0; j < col; ++j) {
 			cin>>data[i][j];
