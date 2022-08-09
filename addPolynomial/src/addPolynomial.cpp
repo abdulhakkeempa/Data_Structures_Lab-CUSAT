@@ -45,15 +45,14 @@ int min(int num1,int num2){
 }
 
 void printPolynomial(int* polynomial,int degree){
-	for (int var = degree; var >= 0; var--) {
-		if(var!=0){
+    int var;
+	for (var = degree; var > 0; var--) {
+	    if(polynomial[var]!=0){
 		cout<<polynomial[var]<<"x"<<var;
 		cout<<" + ";
-		}
-		else{
-			cout<<polynomial[var];
-		}
+	    }
 	}
+	cout<<polynomial[var];
 }
 
 int main() {
