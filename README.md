@@ -29,6 +29,9 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [ ] 26. Push and pop in stack using array and linked list. 
 - [x] [27. Create a Binary search tree and perform traversal (search), insert and delete on the tree.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/binarySearchTree/src/binarySearchTree.cpp)
 - [ ] [28. Quick Sort.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/quickSort/src/quickSort.cpp) 
+## Assignment
+- [-] [1.Magic Square](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/magicSquare.cpp)
+
 ## Algorithms
 ### Binary Search
 ```
