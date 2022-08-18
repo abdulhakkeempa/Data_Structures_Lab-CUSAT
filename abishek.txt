@@ -1,0 +1,60 @@
+binary search
+
+MID = (BEGIN+END)/2
+key = 20
+BEGIN = 0
+END = 7
+MID = 3
+DAT = 10,20,30,40,	50,60,70,80
+DAT[MID] = 40
+END = MID -1
+END = 2
+
+
+10,20,30
+BEGIN = 0
+END = 2
+MID = 1
+DATA[MID] = 20
+RETURN MID;
+
+Ternary Search
+MID1 = BEGIN + (END-BEGIN)/3
+MID2 = END - (END-BEGIN)/3
+	 
+
+10,20,30, 40,50,60,70, 80,90
+BEGIN = 0
+END = 8
+KEY = 40
+
+FIRST PASS
+MID1 = 2
+MID2 = 6
+
+IF(ARR[MID1]==KEY)
+IF(ARR[MID2]==KEY)
+KEY < ARR[MID1]
+KEY < ARR[MID2]
+	BEGIN = MID1+1
+	END = MID2 - 1
+
+SECOND PASS
+BEGIN = 3
+END = 5
+MID1 = 3
+MID2 = 5
+
+
+INTERPOLATION SEARCH
+
+POSITION = BEGIN + ((KEY - ARRAY[BEGIN])*(END-BEGIN)/(ARRAY[END]-ARRAY[BEGIN]))
+ARRAY = 10,20,30, 40,50,60,70, 80,90,100
+BEGIN = 0
+END = 8
+KEY = 60
+
+POSITION = 7
+
+Fibonacci Search = https://www.youtube.com/watch?v=K9n_mkLvRBs
+
