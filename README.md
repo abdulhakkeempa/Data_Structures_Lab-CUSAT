@@ -20,7 +20,7 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [x] [17. Program to add two polynomials using array.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/addPolynomial/src/addPolynomial.cpp) 
 - [x] [18. Searching an item in linked list.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/linkedList/src/linkedList.cpp) 
 - [ ] 19. Insertion of a node to a sorted link list. 
-- [x] [20. Merge two sorted list into a single sorted list.] (mergeLinkedList/src/mergeLinkedList.cpp)
+- [x] [20. Merge two sorted list into a single sorted list.](mergeLinkedList/src/mergeLinkedList.cpp)
 - [ ] 21. Deletion from the linked list 
 - [ ] 22. Program to add two polynomial using linked list. 
 - [ ] 23. Implement Insertion and Deletion operation for Circular Header List. 
