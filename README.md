@@ -14,7 +14,7 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [x] [11. Substring Extraction](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/subString/src/subString.cpp)
 - [x] 12. Pattern Matching
 - [ ] 13. Insertion of String, Deletion of string and Replacement of substring as each functions in a program. 
-- [ ] 14. Transpose of a sparse matrix
+- [x] 14. Transpose of a sparse matrix
 - [ ] 15. Addition of sparse matrix
 - [x] [16. Saddle point](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/saddlePoint/src/saddlePoint.cpp)
 - [x] [17. Program to add two polynomials using array.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/addPolynomial/src/addPolynomial.cpp) 
