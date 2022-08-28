@@ -1,11 +1,3 @@
-//============================================================================
-// Name        : insertToLinkedList.cpp
-// Author      : 
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
 #include <iostream>
 using namespace std;
 
@@ -20,6 +12,9 @@ public:
 	Node(int val){
 		this->data = val;
 		this->link = NULL;
+	}
+	int getData(){
+		return data;
 	}
 	friend class LinkedList;
 };
@@ -58,14 +53,30 @@ void LinkedList::printNode(){
 
 void LinkedList::insertInBetween(int val){
 	Node* temp = head;
-	while(temp!=NULL){
-		Node* succ = new Node();
-		succ = temp->link;
-		if(val>temp->data and val<succ->data){
-			cout<<"Yes between "<<temp->data<<"& "<<succ->data<<endl;
+	if(val<head->getData()){
+//		cout<<"before head"<<endl;
+		Node* newNode = new Node(val);
+		newNode->link = head;
+		head = newNode;
+		return;
+	}
+	while(temp->link!=NULL){
+		Node* succ = temp->link;
+		if(val>temp->getData() and val<succ->getData()){
+//			cout<<"Yes between "<<temp->data<<" & "<<succ->data<<endl;
+			Node* newNode = new Node(val);
+			newNode->link = succ;
+			temp->link = newNode;
+			return;
 		}
 		temp = temp->link;
+	}
+	if(val>temp->getData()){
+		Node* newNode = new Node(val);
+		temp->link = newNode;
+	}
 }
+
 int main() {
 	LinkedList list;
 	list.createNode(10);
@@ -74,6 +85,11 @@ int main() {
 	list.createNode(30);
 	list.createNode(40);
 	list.printNode();
-	list.insertInBetween(20);
+	list.insertInBetween(5);
+	list.insertInBetween(45);
+	list.insertInBetween(32);
+	list.insertInBetween(-1);
+	list.printNode();
+//	list.printNode();
 	return 0;
 }
