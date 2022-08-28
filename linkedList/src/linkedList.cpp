@@ -94,7 +94,7 @@ int main() {
 	LinkedList List;
 	int mainOption,loopOption=1;
 	while (loopOption==1){
-		cout<<"1.Add Node\n2.Search Node"<<endl;
+		cout<<"1.Add Node\n2.Search Node\n3.Delete Node"<<endl;
 		cin>>mainOption;
 		switch (mainOption) {
 			case 1:
@@ -116,14 +116,12 @@ int main() {
 				break;
 			}
 			case 3:
-			{
 				int searchKey;
 				cout<<"Enter the search key "<<endl;
 				cin>>searchKey;
 				List.deleteNode(searchKey);
 				List.printNodes();
 				break;
-			}
 			default:
 				cout<<"Invalid Statement"<<endl;
 				break;
