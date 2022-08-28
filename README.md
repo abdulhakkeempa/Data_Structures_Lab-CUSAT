@@ -26,11 +26,13 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [ ] 23. Implement Insertion and Deletion operation for Circular Header List. 
 - [ ] 24. Searching an item in the Two-way linked list. 
 - [ ] 25. Deletion and insertion of node in two way list
-- [ ] 26. Push and pop in stack using array and linked list. 
+- [x] 26. Push and pop in stack using array and linked list.
+* a . [Array](stackUsingArray/src/stackUsingArray.cpp)
+* b . [LinkedList](stackUsingLinkedList/src/stackUsingLinkedList.cpp)
 - [x] [27. Create a Binary search tree and perform traversal (search), insert and delete on the tree.](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/binarySearchTree/src/binarySearchTree.cpp)
 - [x] [28. Quick Sort.](quickSort.cpp) 
-- [ ] [29. Queue insertion and deletion (linkedlist)]()
-- [ ] [30. Queue insertion and deletion (array)]()
+- [ ] [29. Queue insertion and deletion (Array) ]()
+- [ ] [30. Queue insertion and deletion (LinkedList)]()
 ## Assignment
 - [x] [1.Magic Square](https://github.com/hakkeempa/Data_Structures_Lab-CUSAT/blob/main/magicSquare.cpp)
 
@@ -57,4 +59,31 @@ POS = BEG + [[ITEM - ARRAY[BEG] * [END - BEG]]/[DATA[END]-DATA[BEG]]]
 ### Fibonacci Search - O( log(n ) )
 ### Selection Sort - O( n<sup>2</sup> )
 ### Bubble Sort - O( n<sup>2</sup> )
-### Merge Sort - O( n log<sub>2</sub>( n ) )
+### Merge Sort - O( n log<sub>2</sub>( n ) )  
+
+<br>  
+
+## Menu Driven Template Code 
+```
+	int mainOption,loopOption=1;
+	while (loopOption==1){
+		cout<<"{{Switch Options}}"<<endl;
+		cin>>mainOption;
+		switch (mainOption) {
+			case 1:
+
+				break;
+			case 2:
+
+				break;
+			case 3:
+
+			default:
+				cout<<"Invalid Statement"<<endl;
+				break;
+		}
+		cout<<"Do you want to continue\n1.Continue\n2.Quit"<<endl;
+		cin>>loopOption;
+	}
+	cout<<"Succesfully Exited!"<<endl;
+```
