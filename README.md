@@ -59,4 +59,31 @@ POS = BEG + [[ITEM - ARRAY[BEG] * [END - BEG]]/[DATA[END]-DATA[BEG]]]
 ### Fibonacci Search - O( log(n ) )
 ### Selection Sort - O( n<sup>2</sup> )
 ### Bubble Sort - O( n<sup>2</sup> )
-### Merge Sort - O( n log<sub>2</sub>( n ) )
+### Merge Sort - O( n log<sub>2</sub>( n ) )  
+
+<br>  
+
+## Menu Driven Template Code 
+```
+	int mainOption,loopOption=1;
+	while (loopOption==1){
+		cout<<"{{Switch Options}}"<<endl;
+		cin>>mainOption;
+		switch (mainOption) {
+			case 1:
+
+				break;
+			case 2:
+
+				break;
+			case 3:
+
+			default:
+				cout<<"Invalid Statement"<<endl;
+				break;
+		}
+		cout<<"Do you want to continue\n1.Continue\n2.Quit"<<endl;
+		cin>>loopOption;
+	}
+	cout<<"Succesfully Exited!"<<endl;
+```
