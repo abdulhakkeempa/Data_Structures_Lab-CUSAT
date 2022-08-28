@@ -79,17 +79,32 @@ void LinkedList::insertInBetween(int val){
 
 int main() {
 	LinkedList list;
-	list.createNode(10);
-	list.createNode(20);
-	list.createNode(25);
-	list.createNode(30);
-	list.createNode(40);
-	list.printNode();
-	list.insertInBetween(5);
-	list.insertInBetween(45);
-	list.insertInBetween(32);
-	list.insertInBetween(-1);
-	list.printNode();
-//	list.printNode();
+	int mainOption,loopOption=1;
+	while (loopOption==1){
+		cout<<"1.Add Node\n2.Print Node\n3.Insert New Node"<<endl;
+		cin>>mainOption;
+		switch (mainOption) {
+			case 1:
+				int val;
+				cout<<"Enter the value"<<endl;
+				cin>>val;
+				list.createNode(val);
+				break;
+			case 2:
+				list.printNode();
+				break;
+			case 3:
+				cout<<"Enter the value"<<endl;
+				cin>>val;
+				list.insertInBetween(val);
+				break;
+			default:
+				cout<<"Invalid Statement"<<endl;
+				break;
+		}
+		cout<<"Do you want to continue\n1.Continue\n2.Quit"<<endl;
+		cin>>loopOption;
+	}
+	cout<<"Succesfully Exited!"<<endl;
 	return 0;
 }
