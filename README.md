@@ -22,7 +22,7 @@ All the Programs under the course __[ 21-805-0206 ] Data Structures Lab__ in Int
 - [x] [19. Insertion of a node to a sorted link list.](insertToLinkedList/src/insertToLinkedList.cpp)
 - [x] [20. Merge two sorted list into a single sorted list.](mergeLinkedList/src/mergeLinkedList.cpp)
 - [x] [21. Deletion from the linked list.](linkedList/src/linkedList.cpp) 
-- [ ] 22. Program to add two polynomial using linked list. 
+- [x] [22. Program to add two polynomial using linked list.](polyLinkedList/src/polyLinkedList.cpp)
 - [ ] 23. Implement Insertion and Deletion operation for Circular Header List. 
 - [ ] 24. Searching an item in the Two-way linked list. 
 - [ ] 25. Deletion and insertion of node in two way list
