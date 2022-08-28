@@ -1,11 +1,3 @@
-//============================================================================
-// Name        : linkedList.cpp
-// Author      : 
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
 #include <iostream>
 using namespace std;
 
@@ -35,6 +27,7 @@ public:
 	void addNode(int data);
 	void printNodes();
 	Node* searchItems(int item);
+	void deleteNode(int key);
 };
 
 Node* LinkedList::searchItems(int item){
@@ -78,6 +71,25 @@ void LinkedList::addNode(int data){
 	temp->link = NewNode;
 }
 
+void LinkedList::deleteNode(int key){
+	if(head->data==key){
+		head = head->link;
+		return;
+	}
+	Node* prevNode = head;
+	Node* current = head->link;
+	while(current!=NULL){
+		if(current->data==key){
+			prevNode->link = current->link;
+			delete current;
+			return;
+		}
+		prevNode = current;
+		current = current->link;
+	}
+	cout<<"Element not found "<<endl;
+}
+
 int main() {
 	LinkedList List;
 	int mainOption,loopOption=1;
@@ -101,6 +113,15 @@ int main() {
 				if(address){
 					cout<<"Element found with address "<<address<<endl;
 				}
+				break;
+			}
+			case 3:
+			{
+				int searchKey;
+				cout<<"Enter the search key "<<endl;
+				cin>>searchKey;
+				List.deleteNode(searchKey);
+				List.printNodes();
 				break;
 			}
 			default:

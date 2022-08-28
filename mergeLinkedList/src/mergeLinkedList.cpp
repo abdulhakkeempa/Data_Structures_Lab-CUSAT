@@ -49,6 +49,7 @@ void LinkedList::createNode(int val){
 }
 
 void LinkedList::printNode(){
+	cout<<head->data<<endl;
 	Node* temp = new Node();
 	temp = head;
 	while(temp!=NULL){
