@@ -62,13 +62,13 @@ void LinkedList::mergeList(LinkedList list1,LinkedList list2){
 	Node* temp1 = list1.head;
 	Node* temp2 = list2.head;
 	while(temp1!=NULL and temp2!=NULL){
-		if(temp1->data>temp2->data){
-			createNode(temp2->data);
+		if(temp1->getValue()>temp2->getValue()){
+			createNode(temp2->getValue());
 //			cout<<temp2->data<<endl;
 			temp2 = temp2->link;
 		}
 		else{
-			createNode(temp1->data);
+			createNode(temp1->getValue());
 //			cout<<temp1->data<<endl;
 			temp1 = temp1->link;
 		}
