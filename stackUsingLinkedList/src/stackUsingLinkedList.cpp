@@ -48,6 +48,9 @@ void Stack::push(int val){
 }
 
 void Stack::pop(){
+	if(top==NULL){
+		cout<<"Stack Underflow"<<endl;
+	}
 	Node* temp = NULL;
 	temp = top;
 	top = top->link;

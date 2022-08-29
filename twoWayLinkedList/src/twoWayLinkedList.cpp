@@ -84,5 +84,6 @@ int main() {
 	two.createNode(70);
 	two.printFromFirst();
 	two.printFromBack();
+
 	return 0;
 }
