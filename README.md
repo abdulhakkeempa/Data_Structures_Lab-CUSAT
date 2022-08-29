@@ -78,6 +78,7 @@ POS = BEG + [[ITEM - ARRAY[BEG] * [END - BEG]]/[DATA[END]-DATA[BEG]]]
 				break;
 			case 3:
 
+				break;
 			default:
 				cout<<"Invalid Statement"<<endl;
 				break;
