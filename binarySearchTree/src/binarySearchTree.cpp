@@ -168,5 +168,32 @@ int main() {
 	Tree.deletion(150);
 	Tree.deletion(10);
 	Tree.printNode();
+	int mainOption,loopOption=1;
+	while (loopOption==1){
+		cout<<"{{Switch Options}}"<<endl;
+		cin>>mainOption;
+		switch (mainOption) {
+			case 1:
+				int val;
+				cout<<"Enter the value"<<endl;
+				cin>>val;
+				Tree.createNode(val);
+				break;
+			case 2:
+				Tree.printNode();
+				break;
+			case 3:
+				cout<<"Enter the delete key"<<endl;
+				cin>>val;
+				Tree.deletion(val);
+				break;
+			default:
+				cout<<"Invalid Statement"<<endl;
+				break;
+		}
+		cout<<"Do you want to continue\n1.Continue\n2.Quit"<<endl;
+		cin>>loopOption;
+	}
+	cout<<"Succesfully Exited!"<<endl;
 	return 0;
 }
