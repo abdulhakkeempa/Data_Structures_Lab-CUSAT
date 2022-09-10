@@ -68,14 +68,29 @@ void Stack::print(){
 
 int main() {
 	Stack S;
-	S.push(10);
-	S.push(20);
-	S.push(30);
-	S.push(40);
-	S.print();
-	S.pop();
-	S.print();
-	S.pop();
-	S.print();
+	int mainOption,loopOption=1;
+	while (loopOption==1){
+		cout<<"1.Push to Stack\n2.Pop from Stack"<<endl;
+		cin>>mainOption;
+		switch (mainOption) {
+			case 1:
+				int val;
+				cout<<"Enter the value"<<endl;
+				cin>>val;
+				S.push(val);
+				S.print();
+				break;
+			case 2:
+				S.pop();
+				S.print();
+				break;
+			default:
+				cout<<"Invalid Statement"<<endl;
+				break;
+		}
+		cout<<"Do you want to continue\n1.Continue\n2.Quit"<<endl;
+		cin>>loopOption;
+	}
+	cout<<"Succesfully Exited!"<<endl;
 	return 0;
 }
