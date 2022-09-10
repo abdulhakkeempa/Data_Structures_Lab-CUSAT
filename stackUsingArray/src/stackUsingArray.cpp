@@ -35,16 +35,28 @@ int Stack::pop(){
 
 int main() {
 	Stack A;
-	A.push(10);
-	A.push(20);
-	A.push(30);
-	A.push(40);
-	cout<<A.pop()<<endl;
-	cout<<A.pop()<<endl;
-	cout<<A.pop()<<endl;
-	cout<<A.pop()<<endl;
-	cout<<A.pop()<<endl;
-	A.push(20);
-	cout<<A.pop()<<endl;
+	int mainOption,loopOption=1;
+	while (loopOption==1){
+		cout<<"1.Push to Stack\n2.Pop to Stack"<<endl;
+		cin>>mainOption;
+		switch (mainOption) {
+			case 1:
+				int val;
+				cout<<"Enter the value"<<endl;
+				cin>>val;
+				A.push(val);
+				break;
+			case 2:
+				cout<<"Popped Value : ";
+				cout<<A.pop()<<endl;
+				break;
+			default:
+				cout<<"Invalid Statement"<<endl;
+				break;
+		}
+		cout<<"Do you want to continue\n1.Continue\n2.Quit"<<endl;
+		cin>>loopOption;
+	}
+	cout<<"Succesfully Exited!"<<endl;
 	return 0;
 }
