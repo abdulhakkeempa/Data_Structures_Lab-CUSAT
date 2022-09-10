@@ -86,30 +86,40 @@ void LinkedList::mergeList(LinkedList list1,LinkedList list2){
 }
 
 int main() {
-	LinkedList li1;
-	LinkedList li2;
-
-	cout<<"List - 1"<<endl;
-	li1.createNode(10);
-	li1.createNode(20);
-	li1.createNode(30);
-	li1.createNode(100);
-	li1.createNode(400);
-	li1.createNode(1000);
-	li1.createNode(2000);
-	li1.printNode();
-
-	cout<<"List - 2"<<endl;
-	li2.createNode(15);
-	li2.createNode(25);
-	li2.createNode(35);
-	li2.createNode(45);
-	li2.createNode(200);
-	li2.printNode();
-
-	LinkedList li3;
-	cout<<"Merged List"<<endl;
-	li3.mergeList(li1, li2);
-	li3.printNode();
+	LinkedList list1;
+	LinkedList list2;
+	int mainOption,loopOption=1;
+	while (loopOption==1){
+		cout<<"1.Add Node to List 1\n2.Add Node to List 2\n3.Merge the Nodes"<<endl;
+		cin>>mainOption;
+		switch (mainOption) {
+			case 1:
+				int val;
+				cout<<"Enter the value"<<endl;
+				cin>>val;
+				list1.createNode(val);
+				list1.printNode();
+				break;
+			case 2:
+				cout<<"Enter the value"<<endl;
+				cin>>val;
+				list2.createNode(val);
+				list2.printNode();
+				break;
+			case 3:
+			{
+				LinkedList list3;
+				list3.mergeList(list1, list2);
+				list3.printNode();
+				break;
+			}
+			default:
+				cout<<"Invalid Statement"<<endl;
+				break;
+		}
+		cout<<"Do you want to continue\n1.Continue\n2.Quit"<<endl;
+		cin>>loopOption;
+	}
+	cout<<"Succesfully Exited!"<<endl;
 	return 0;
 }
