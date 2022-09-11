@@ -157,20 +157,9 @@ Node* BinaryTree::deleteNode(Node* node,int key){
 
 int main() {
 	BinaryTree Tree;
-	Tree.createNode(100);
-	Tree.createNode(20);
-	Tree.createNode(200);
-	Tree.createNode(10);
-	Tree.createNode(30);
-	Tree.createNode(150);
-	Tree.createNode(300);
-	Tree.printNode();
-	Tree.deletion(150);
-	Tree.deletion(10);
-	Tree.printNode();
 	int mainOption,loopOption=1;
 	while (loopOption==1){
-		cout<<"{{Switch Options}}"<<endl;
+		cout<<"1.Create Node\n2.Print Node\n3.Delete Node"<<endl;
 		cin>>mainOption;
 		switch (mainOption) {
 			case 1:
