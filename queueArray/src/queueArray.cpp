@@ -67,10 +67,10 @@ int main(void) {
 				q.display();
 				break;
 			case 2:
+				q.dequeue();
 				q.display();
 				break;
 			case 3:
-				q.dequeue();
 				q.display();
 				break;
 			default:
