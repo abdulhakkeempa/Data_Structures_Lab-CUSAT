@@ -33,8 +33,8 @@ int main() {
 	char str[20],pattern[10];
 	cout<<"Enter the string"<<endl;
 	cin>>str;
-	cout<<"The Substrings of "<<str<<" are "<<endl;
-	subStringExtraction(str, strlen(str));
+//	cout<<"The Substrings of "<<str<<" are "<<endl;
+//	subStringExtraction(str, strlen(str));
 	cout<<"Enter the pattern"<<endl;
 	cin>>pattern;
 	patternMatching(str, pattern);

@@ -132,6 +132,11 @@ int main() {
 			case 3:
 			{
 				LinkedList sum;
+				cout<<"Poly - 1 : ";
+				poly1.printPolynomial();
+				cout<<"Poly - 2 : ";
+				poly2.printPolynomial();
+				cout<<"Sum : ";
 				sum.addPolynomial(poly1, poly2);
 				cout<<"Sum : ";
 				sum.printPolynomial();
