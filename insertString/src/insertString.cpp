@@ -60,13 +60,5 @@ int main() {
 		cin>>loopOption;
 	}
 	cout<<"Succesfully Exited!"<<endl;
-
-
-	replaceStr(str);
-	cout<<str;
-	insertStr(str);
-	cout<<str;
-	deleteStr(str);
-	cout<<str;
 	return 0;
 }
