@@ -1,89 +1,87 @@
 #include <iostream>
 using namespace std;
 
-class Node{
+class Node {
+public:
 	int data;
-	Node* left;
-	Node* right;
-public:
-	Node(){
-		this->left = NULL;
-		this->right = NULL;
-		this->data = 0;
-	}
-	Node(int val){
-		this->data = val;
-		this->left = NULL;
-		this->right = NULL;
-	}
-	int getValue(){
-		return data;
-	}
-	void setValue(int val){
-		this->data = val;
-		this->right = NULL;
-		this->left = NULL;
-	}
-	friend class LinkedList;
+	Node* next;
+	Node* prev;
 };
 
-class LinkedList{
-	Node* head;
-	Node* last;
-public:
-	LinkedList(){
-		head = NULL;
-		last = NULL;
-	}
-	void createNode(int);
-	void printFromFirst();
-	void printFromBack();
-};
+void push(Node** head_ref, int new_data)
+{
+	Node* new_node = new Node();
+	new_node->data = new_data;
 
-void LinkedList::createNode(int val){
-	Node* newNode = new Node(val);
-	if(head==NULL){
-		head = newNode;
-		return;
-	}
-	Node* temp = head;
-	Node* prev = NULL;
-	while(temp->right!=NULL){
-		prev = temp;
-		temp = temp->right;
-	}
-	temp->left = prev;
-	temp->right = newNode;
-	last = temp->right;
+	new_node->next = (*head_ref);
+	new_node->prev = NULL;
+
+	if ((*head_ref) != NULL)
+		(*head_ref)->prev = new_node;
+
+	(*head_ref) = new_node;
 }
 
-void LinkedList::printFromFirst(){
-	Node* temp = head;
-	while(temp!=NULL){
-		cout<<temp->left<<" : "<<temp->data<<" : "<<temp->right<<endl;
-		temp = temp->right;
+void printList(Node* node){
+	Node* last;
+	cout << "\nTraversal in forward direction \n";
+	while (node != NULL) {
+		cout << " " << node->data << " ";
+		last = node;
+		node = node->next;
+	}
+
+	cout << "\nTraversal in reverse direction \n";
+	while (last != NULL) {
+		cout << " " << last->data << " ";
+		last = last->prev;
 	}
 	cout<<endl;
 }
 
-void LinkedList::printFromBack(){
-	Node* temp = last;
-	while(temp!=NULL){
-		cout<<temp->data<<endl;
-		temp = temp->left;
-	}
+void search(Node** head_ref, int key){
+    if ((*head_ref) == NULL)
+        return;
+    Node* current = *head_ref;
+    while(current != NULL){
+        if(current->data==key){
+            cout<<"Key found"<<endl;
+            return;
+        }
+        current = current->next;
+    }
+    cout<<"no key found"<<endl;
 }
-int main() {
-	LinkedList two;
-	two.createNode(10);
-	two.createNode(20);
-	two.createNode(30);
-	two.createNode(40);
-	two.createNode(50);
-	two.createNode(60);
-	two.createNode(70);
-	two.printFromFirst();
-	two.printFromBack();
 
+
+int main(){
+	Node* head = NULL;
+	int mainOption,loopOption=1;
+	while (loopOption==1){
+		cout<<"1.Add Node\n2.Search Node\n3.Print List"<<endl;
+		cin>>mainOption;
+		switch (mainOption) {
+			case 1:
+				int val;
+				cout<<"Enter your value"<<endl;
+				cin>>val;
+				push(&head,val);
+				break;
+			case 2:
+				cout<<"Enter your value"<<endl;
+				cin>>val;
+				search(&head,val);
+				break;
+			case 3:
+				printList(head);
+				break;
+			default:
+				cout<<"Invalid Statement"<<endl;
+				break;
+		}
+		cout<<"Do you want to continue\n1.Continue\n2.Quit"<<endl;
+		cin>>loopOption;
+	}
+	cout<<"Successfully Exited!"<<endl;
 	return 0;
 }
