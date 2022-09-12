@@ -1,70 +1,102 @@
 #include <iostream>
 using namespace std;
 
-class LinkedList;
-class Node{
+class Node {
+public:
 	int data;
-	Node* link;
-public:
-	Node(){
-		data = 0;
-		link = NULL;
-	}
-    Node(int data){
-        this->data = data;
-        this->link = NULL;
-    }
-    friend class LinkedList;
+	Node* next;
 };
 
-class LinkedList{
-	Node* head;
-public:
-	LinkedList(){
-		head = NULL;
+void push(Node** head_ref, int data){
+	Node* ptr1 = new Node();
+	ptr1->data = data;
+	ptr1->next = *head_ref;
+	if (*head_ref != NULL) {
+		Node* temp = *head_ref;
+		while (temp->next != *head_ref)
+			temp = temp->next;
+		temp->next = ptr1;
 	}
+	else{
+		ptr1->next = ptr1;
+	}
+	*head_ref = ptr1;
+}
 
-	void addNode(int data);
-	void printNodes();
-	void deleteNode(int key);
-};
+void printList(Node* head){
+	Node* temp = head;
+	if (head != NULL) {
+		do {
+			cout << temp->data << " ";
+			temp = temp->next;
+		} while (temp != head);
+	}
+	cout << endl;
+}
 
-void LinkedList::printNodes(){
-	if(head==NULL){
-		cout<<"List Overflow"<<endl;
+void deleteNode(Node** head, int key){
+	if (*head == NULL){
 		return;
 	}
-	Node* temp = head;
-	while(temp ->link!=head){
-		if(temp->data<10){
-			cout<<" ";
+	if ((*head)->data == key && (*head)->next == *head) {
+		*head = NULL;
+		return;
+	}
+	Node *last = *head, *d;
+	if ((*head)->data == key) {
+		while (last->next != *head){
+			last = last->next;
 		}
-		cout<<temp->data<<" | "<<temp->link<<" | "<<endl;
-		temp = temp->link;
-	}
-}
-
-void LinkedList::addNode(int data){
-	Node* NewNode = new Node(data);
-
-	if(head == NULL){
-		head = NewNode;
+		last->next = (*head)->next;
+		*head = last->next;
 		return;
 	}
-	Node* temp = head;
-	while (temp->link != head){
-		temp = temp->link;
+	while (last->next != *head && last->next->data != key) {
+		last = last->next;
 	}
-	temp->link = NewNode;
-	NewNode->link = head;
+	if (last->next->data == key) {
+		d = last->next;
+		last->next = d->next;
+	}
+	else{
+		cout << "no such keyfound"<<endl;
+	}
 }
 
-int main() {
-	LinkedList li1;
-	li1.addNode(10);
-	li1.addNode(20);
-	li1.addNode(30);
-	li1.addNode(40);
-	li1.printNodes();
+int main()
+{
+	Node* head = NULL;
+	int mainOption,loopOption=1;
+	cout<<"Circular Header List"<<endl;
+	while (loopOption==1){
+		cout<<"1.Add Node\n2.Delete Node\n3.Print Node"<<endl;
+		cin>>mainOption;
+		switch (mainOption) {
+			case 1:
+				int val;
+				cout<<"Enter you value"<<endl;
+				cin>>val;
+				push(&head, val);
+				break;
+			case 2:
+				cout<<"Enter the delete key"<<endl;
+				cin>>val;
+				deleteNode(&head, val);
+				cout<<"List after deletion"<<endl;
+				printList(head);
+				break;
+			case 3:
+				cout<<"List"<<endl;
+				printList(head);
+				break;
+			default:
+				cout<<"Invalid Statement"<<endl;
+				break;
+		}
+		cout<<"Do you want to continue\n1.Continue\n2.Quit"<<endl;
+		cin>>loopOption;
+	}
+	cout<<"Successfully Exited!"<<endl;
+
 	return 0;
 }
